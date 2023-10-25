@@ -46,14 +46,38 @@ numbers[2] = 307
 
 print("numbers: \(numbers)")
 
+// * Sharpen your pencil
+// 1. Create this array, as a variable, storing the pizza names in it.
+var pizzas = ["Hawaiian", "Cheese", "Margherita", "Meatlovers", "Vegetarian",  "Prosciutto", "Vegan"]
+
+// 2. Print the element of the array that contains "Vegetarian".
+print(pizzas[4])
+
+// 3. Append the pizza "Pepperoni" to the array, without changing the rest of the array.
+pizzas.append("Pepperoni")
+
+
+// 4. Insert a new pizza, "ham, Pineapple, and Presto", at index 2, shuffling everything after along by one index.
+pizzas.insert("Ham, Pineapple, and Pesto", at: 2)
+
+// 5. Remove the "Cheese" pizza from the array entirely, leaving the rest intact.
+pizzas.remove(at: 1)
+
+// 6. Swap the "Prosciutto" pizza for a "Pumpkin and Feta" pizza, without changing the rest of the array.
+pizzas[5] = "Pumpkin and Feta"
+
+// 7. Print out the whole array.
+print(pizzas)
+
+
 // * How big is that array, exactly? Is it empty?
 var ingredients = ["Oregano", "Ham", "Tomato", "Olives", "Cheese"]
 
 print("There are \(ingredients.count) ingredients in this pizza.")
 
 print("ingredients is empty?: \(ingredients.isEmpty)")
-//print(ingredients.max())
-//print(ingredients.min())
+print(ingredients.max())
+print(ingredients.min())
 
 // * Collecting values in a set
 var evenNumbers = Set([2, 4, 6, 8])
@@ -69,6 +93,10 @@ print("oddNumbers after inserting: \(oddNumbers)")
 // remove elements
 oddNumbers.remove(3)
 print("oddNumbers after removing: \(oddNumbers)")
+
+// * Sharpen your pencil
+var pizzasSet = Set(["Hawaiian", "Vegan", "Meatlovers", "Hawaiian"])
+print(pizzasSet)
 
 // * Collecting values in a dictionary
 var scores = ["Paris": 5, "Marina": 10, "Tim": 9, "Jon": 14]
@@ -89,6 +117,25 @@ scores.updateValue(17, forKey: "Bob")
 
 scores["Josh"] = 4
 print("scores: \(scores)")
+
+// * Exercise
+var forbiddenPizzas: Set = ["Lemon and Pumpkin", "Hawaiian with a Fried Egg", "Schnitzel and Granola"]
+
+forbiddenPizzas.insert("Checken and Boston Beans")
+forbiddenPizzas.remove("Lemon and Pumpkin")
+
+// What does forbiddenPizza contain now?
+print(forbiddenPizzas)
+
+var dessertPizzaOrders = ["Rocky Road": 2, "Nutella": 3, "Caramel Swirl": 1]
+
+// Print the quantity of Rocky Road, and the quantity of Caramel Swirl. Then and a new order for 17 Banana Split pizzas.
+print(dessertPizzaOrders["Rocky Road"]!)
+print(dessertPizzaOrders["Caramel Swirl"]!)
+//dessertPizzaOrders.updateValue(17, forKey: "Banana Split")
+dessertPizzaOrders["Banana Split"] = 17
+print(dessertPizzaOrders)
+
 
 // * Tuples
 var point = (x: 10, y: 15)

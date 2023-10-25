@@ -163,3 +163,106 @@ var result: Fahrenheit
 
 result = (temp*9/5)+32
 print("\(temp) C is \(result) F")
+
+// * Control flow statements
+
+// * if statements
+var userLovesPizza: Bool = true
+
+if(userLovesPizza) {
+    print("Enjoy")
+}
+
+if(userLovesPizza) {
+    print("Enjoy!")
+} else {
+    print("Sorry!")
+}
+
+// * switch statements
+var pizzaOrdered = "Hawaiian"
+
+if(pizzaOrdered == "Hawaiian") {
+    print("Hawaiian is my favorite. Great choice!")
+} else if(pizzaOrdered == "Four Cheese") {
+    print("The only thing better than cheese is four cheeses")
+} else if(pizzaOrdered == "BBQ Chicken") {
+    print("Chicken and BBQ sauce! What could be better?")
+} else if(pizzaOrdered == "Margherita") {
+    print("It's a classic for a reason!")
+}
+
+switch(pizzaOrdered) {
+case "Hawaiian":
+    print("Hawaiian is my favorite. Great choice!")
+case "Four Cheese":
+    print("The only thing better than cheese is four cheeses.")
+case "BBQ Chicked":
+    print("Chicken and BBQ sauce! What could be better?")
+case "Margherita":
+    print("It's a classic for a reason!")
+default:
+    break
+}
+
+// * Building a switch statement
+var number = 42
+
+switch number {
+case 9:
+    print("The number is 9! A mundane number.")
+case 42:
+    print("It's the meaning of life!")
+case 47:
+    print("The meaning of life, corrected for inflation.")
+case 317:
+    print("A rather large number.")
+default:
+    break
+}
+
+// * Range operators
+print(1...4) // closed range operator
+print(1..<5) // half-open range operator
+
+// one-sided range operator
+let myRange = 5...
+let myOtherRange = ...100
+
+print("myRange.contains(1): " + String(myRange.contains(1)))
+print("myRange.contains(70): " + String(myRange.contains(70)))
+
+print("myOtherRange.contains(50): " + String(myOtherRange.contains(50)))
+print("myOtherRange.contains(-10): " + String(myOtherRange.contains(-10)))
+
+// * More complex switch statements
+let studentScore = 88
+var scoreResult = "TBD"
+
+switch studentScore {
+case 0...49:
+    scoreResult = "Fail"
+case 50...59:
+    scoreResult = "Pass"
+case 60...69:
+    scoreResult = "Credit"
+case 70...79:
+    scoreResult = "Distinction"
+case 80...89:
+    scoreResult = "High Distinction"
+case 100:
+    scoreResult = "Perfect"
+default:
+    scoreResult = "Unknown"
+}
+
+print("scoreResult: \(scoreResult)")
+
+var num = 5
+
+switch num {
+case _ where num % 2 == 0:
+    print("This number is an Even number!")
+default:
+    print("This number is an Odd number!")
+}

@@ -132,7 +132,7 @@ var dessertPizzaOrders = ["Rocky Road": 2, "Nutella": 3, "Caramel Swirl": 1]
 // Print the quantity of Rocky Road, and the quantity of Caramel Swirl. Then and a new order for 17 Banana Split pizzas.
 print(dessertPizzaOrders["Rocky Road"]!)
 print(dessertPizzaOrders["Caramel Swirl"]!)
-//dessertPizzaOrders.updateValue(17, forKey: "Banana Split")
+// dessertPizzaOrders.updateValue(17, forKey: "Banana Split")
 dessertPizzaOrders["Banana Split"] = 17
 print(dessertPizzaOrders)
 
@@ -170,13 +170,47 @@ print("\(temp) C is \(result) F")
 var userLovesPizza: Bool = true
 
 if(userLovesPizza) {
-    print("Enjoy")
+    print("Enjoy! 🍕")
 }
 
 if(userLovesPizza) {
-    print("Enjoy!")
+    print("Enjoy! 🍕")
 } else {
     print("Sorry!")
+}
+
+// * Exercise
+var hawaiianPizzaOrdered = true
+var veganPizzaOrdered = true
+var pepperoniPizzaOrdered = true
+
+if(hawaiianPizzaOrdered) {
+    print("Please deliver a Hawaiian pizza.")
+    hawaiianPizzaOrdered = false
+}
+
+if(veganPizzaOrdered) {
+    print("Please deliver a Vegan pizza.")
+    veganPizzaOrdered = false
+}
+
+if(pepperoniPizzaOrdered) {
+    print("Please deliver a Pepperoni pizza.")
+    pepperoniPizzaOrdered = false
+}
+
+var pizzaOrder = ["Hawaiian": 2, "Vegan": 1, "Pepperoni": 9]
+
+if(pizzaOrder["Hawaiian"]! > 0) {
+    print("Please deliver \(pizzaOrder["Hawaiian"]!)x Hawaiian pizza.")
+}
+
+if(pizzaOrder["Vegan"]! > 0) {
+    print("Please deliver \(pizzaOrder["Vegan"]!)x Vegan pizza.")
+}
+
+if(pizzaOrder["Pepperoni"]! > 0) {
+    print("Please deliver \(pizzaOrder["Pepperoni"]!)x Pepperoni pizza.")
 }
 
 // * switch statements
@@ -192,6 +226,20 @@ if(pizzaOrdered == "Hawaiian") {
     print("It's a classic for a reason!")
 }
 
+// * Sharpen your pencil
+var planet = "Jupiter"
+if(planet == "Jupiter") {
+    print("Jupiter is named after the Roman king of the gods.")
+} else if(planet == "Neptune") {
+    print("Neptune is inhospitable to life as we know it.")
+} else if(planet == "Mars") {
+    print("Mars has a lot of  Earth-made rovers on it.")
+} else if(planet == "Earth") {
+    print("Earth is infested with something called 'humans'.")
+} else {
+    print("All the planets are pretty cool.")
+}
+
 switch(pizzaOrdered) {
 case "Hawaiian":
     print("Hawaiian is my favorite. Great choice!")
@@ -203,6 +251,20 @@ case "Margherita":
     print("It's a classic for a reason!")
 default:
     break
+}
+
+// * Exercise
+var luckyNumber = 6
+
+switch(luckyNumber) {
+case 6:
+    print("6 means easy and smooth, all the way!")
+case 8:
+    print("8 means sudden fortune!")
+case 99:
+    print("99 means eternal!")
+default:
+    print("I've told you everything I know about lucky numbers.")
 }
 
 // * Building a switch statement
@@ -235,6 +297,16 @@ print("myRange.contains(70): " + String(myRange.contains(70)))
 print("myOtherRange.contains(50): " + String(myOtherRange.contains(50)))
 print("myOtherRange.contains(-10): " + String(myOtherRange.contains(-10)))
 
+// * Exercise
+// 72 to 96
+72...96
+// -100 to 100
+-100...100
+// 9 to infinity
+9...
+// Negative infinity to 37,000
+...37000
+
 // * More complex switch statements
 let studentScore = 88
 var scoreResult = "TBD"
@@ -266,3 +338,67 @@ case _ where num % 2 == 0:
 default:
     print("This number is an Odd number!")
 }
+
+// * Getting repetitive with loops
+
+// * Builidng a for loop
+for i in 1...10 {
+    print(i)
+}
+
+// * Exercise
+// print the odd numbers between 1 and 20
+for i in 1...20 {
+    if i % 2 != 0 {
+        print(i)
+    }
+}
+
+// iterate over the items in an array
+let drinks = ["Coffee", "Tea", "Water", "Whisky"]
+
+for drink in drinks {
+    print("\(drink) is still available!")
+}
+
+// This does exactly the same as the previous code snippet.
+for d in drinks {
+    print("\(d) is still available!")
+}
+
+// forEach
+drinks.forEach {
+    print("\($0) is still available!")
+}
+
+// * Building a while loop
+var product = 1
+
+while product < 100 {
+    product = product * 2
+}
+
+// * Building a repeat-while loop
+product = 1
+
+repeat {
+    product = product * 2
+} while product < 100
+
+// * Exercise
+var currentLevel = 1
+var winningLevel = 10
+
+repeat {
+    print("We're at level \(currentLevel) of \(winningLevel)")
+    currentLevel = currentLevel + 1
+} while (currentLevel <= winningLevel)
+print("Game finished!")
+
+// * Solving the pizza-sorting problem
+
+// * Exercise
+var listOfPizza = ["Hawaiian", "Cheese", "Margherita", "Meatlovers", "Vegetarian", "Prosciutto", "Vegan"]
+
+listOfPizza = listOfPizza.sorted()
+print(listOfPizza)
